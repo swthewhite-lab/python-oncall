@@ -12,8 +12,8 @@
 
 ## 📮 미션 제출 방법
 
-- **개인 GitHub**에 본 미션 저장소를 **Fork & Clone**하여 프로젝트를 진행합니다.
-- 기능 구현을 완료한 후, **Pull Request**를 통해 최종 제출합니다.  
+- **개인 GitHub**에 본 미션 저장소를 **공개 저장소로 생성**하여 프로젝트를 진행합니다.
+- 기능 구현을 완료한 후, **develop** 브랜치에 **Pull Request**를 통해 최종 제출합니다.  
    (자세한 방법은 각자 협업 환경에 따라 결정하셔도 됩니다.)
 - 제출 후, 필요하다면 추가로 의견을 교환하거나, 간단한 피드백을 주고받을 수 있습니다.
 
@@ -191,15 +191,18 @@
     - `else`가 필요하면 로직을 더 잘게 분리해 보세요.
 -  **도메인 로직**에 대해서는 단위 테스트 코드를 작성해 주세요. 단, **UI 로직**(`input`, `print` 등)은 테스트 대상에서 제외합니다.  
     - 핵심 로직을 구현하는 코드와 UI를 담당하는 로직을 분리해 구현합니다.
+      - 입력은 `input_view.py`에 InputView 클래스로 정의합니다.
+      - 출력은 `output_view.py`에 OutputView 클래스로 정의합니다.
 -  **잘못된 값**을 입력받은 경우, **`ValueError`**(또는 적절한 예외)를 발생시키고, 에러 메시지를 **"[ERROR]"** 로 시작해 출력한 뒤, 그 단계부터 **다시 입력**을 받도록 구성합니다.
 
 ---
 
 ## ✏️ 과제 진행 요구 사항
 
-- 미션은 [python-oncall](https://github.com/swthewhite-lab/python-oncall) 저장소를 비공개 저장소로 생성해 시작한다.
+- 미션은 [python-oncall](https://github.com/swthewhite-lab/python-oncall) 저장소를 공개 저장소로 생성해 시작한다.
 - **기능을 구현하기 전 `docs/README.md`에 구현할 기능 목록을 정리**해 추가한다.
 - **Git의 커밋 단위는 앞 단계에서 `docs/README.md`에 정리한 기능 목록 단위**로 추가한다.
     - [커밋 메시지 컨벤션](https://gist.github.com/stephenparish/9941e89d80e2bc58a153) 가이드를 참고해 커밋 메시지를 작성한다.
 - 과제 진행 및 제출 방법은 [프리코스 과제 제출](https://docs.google.com/document/d/1cmg0VpPkuvdaetxwp4hnyyFC_G-1f2Gr8nIDYIWcKC8/edit?usp=sharing) 문서를 참고한다.
-- **`docs/how-to-solve.md`에서 미션 해결 전략 문항에 답변을 필수로** 작성한다.   
+- **`docs/report.md`에서 양식에 맞춰 보고서를 1000자 이상 필수로** 작성한다.   
+- **`docs/how-to-solve.md`에서 미션 해결 전략 문항에 답변을 필수로** 작성한다.
