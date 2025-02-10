@@ -1,0 +1,25 @@
+name: Check Report Length
+
+on:
+  pull_request:
+    branches: [ develop ]
+    
+jobs:
+  check-report-length:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Check if docs/report.md has at least 1000 characters
+        run: |
+          if [ ! -f docs/report.md ]; then
+            echo "❌ docs/report.md file is missing!"
+            exit 1
+          fi
+          CHAR_COUNT=$(wc -m < docs/report.md)
+          if [ "$CHAR_COUNT" -lt 1000 ]; then
+            echo "❌ docs/report.md must have at least 1000 characters! (Current: $CHAR_COUNT)"
+            exit 1
+          fi
+          echo "✅ docs/report.md meets the character requirement. (Current: $CHAR_COUNT)"
